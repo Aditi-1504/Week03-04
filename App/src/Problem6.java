@@ -1,14 +1,11 @@
 import java.util.*;
-
 public class Problem6 {
-
     public static int linear(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == target) return i;
         }
         return -1;
     }
-
     public static int floor(int[] arr, int target) {
         int l = 0, r = arr.length - 1, res = -1;
 
@@ -23,10 +20,8 @@ public class Problem6 {
         }
         return res;
     }
-
     public static int ceil(int[] arr, int target) {
         int l = 0, r = arr.length - 1, res = -1;
-
         while (l <= r) {
             int m = (l + r) / 2;
             if (arr[m] >= target) {
